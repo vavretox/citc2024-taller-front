@@ -57,7 +57,7 @@ jobs:
         run: ssh ${{ vars.DEVELOP_SSH_USERNAME }}@${{ vars.DEVELOP_SSH_HOST }} "echo ${{ secrets.DOCKER_REGISTRY_TOKEN }} | docker login ghcr.io -u ${{ vars.DOCKER_REGISTRY_USER }}" --password-stdin
 
       - name: Run docker-compose
-        run: ssh ${{ vars.DEVELOP_SSH_USERNAME }}@${{ vars.DEVELOP_SSH_HOST }} "cd frontend && docker compose up -d"
+        run: ssh ${{ vars.DEVELOP_SSH_USERNAME }}@${{ vars.DEVELOP_SSH_HOST }} "cd citc2024-taller-infra/citc2024/frontend && docker compose up -d"
 
       - name: Delete unused images
         run: ssh ${{ vars.DEVELOP_SSH_USERNAME }}@${{ vars.DEVELOP_SSH_HOST }} "docker image prune -f"
