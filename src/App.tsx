@@ -25,7 +25,7 @@ const App: React.FC = () => {
                     className="px-4 py-2 border rounded-lg shadow-sm"
                 />
                 <Button onClick={handleFetchItem} className="px-4 py-2 bg-blue-500 text-white rounded-lg">
-                    Buscar
+                    Buscar2
                 </Button>
             </div>
 
